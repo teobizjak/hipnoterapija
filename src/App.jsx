@@ -8,7 +8,7 @@ const FloatingParticle = ({ index }) => {
   const duration = Math.random() * 20 + 15;
   const delay = Math.random() * 20;
   const size = Math.random() * 6 + 3;
-  const colors = ['bg-amber-400', 'bg-rose-300', 'bg-amber-300', 'bg-rose-200', 'bg-amber-200'];
+  const colors = ['bg-lime-400', 'bg-rose-300', 'bg-lime-300', 'bg-rose-200', 'bg-lime-200'];
   const colorClass = colors[index % colors.length];
 
   return (
@@ -54,11 +54,11 @@ const Navbar = ({ onOpenModal }) => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-400 ${
-        scrolled ? 'bg-rose-50/95 backdrop-blur-md shadow-lg shadow-amber-200/10 py-3' : 'bg-transparent py-4'
+        scrolled ? 'bg-rose-50/95 backdrop-blur-md shadow-lg shadow-lime-200/10 py-3' : 'bg-transparent py-4'
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="text-2xl font-serif font-bold text-amber-600 tracking-wide">
+        <a href="#" className="text-2xl font-serif font-bold text-lime-600 tracking-wide">
           Notranja <span className="text-rose-400">Preobrazba</span>
         </a>
 
@@ -67,17 +67,17 @@ const Navbar = ({ onOpenModal }) => {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-stone-600 hover:text-amber-600 transition-colors duration-300 text-sm tracking-wide relative group"
+                className="text-stone-600 hover:text-lime-600 transition-colors duration-300 text-sm tracking-wide relative group"
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-500 transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-lime-500 transition-all duration-300 group-hover:w-full" />
               </a>
             </li>
           ))}
           <li>
             <button
               onClick={onOpenModal}
-              className="bg-gradient-to-r from-amber-500 to-amber-400 text-white px-5 py-2 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-amber-400/30 hover:-translate-y-0.5 transition-all duration-300"
+              className="bg-gradient-to-r from-lime-500 to-lime-400 text-white px-5 py-2 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-lime-400/30 hover:-translate-y-0.5 transition-all duration-300"
             >
               Brezplačen pogovor
             </button>
@@ -89,17 +89,17 @@ const Navbar = ({ onOpenModal }) => {
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <span
-            className={`w-6 h-0.5 bg-amber-600 transition-all duration-300 ${
+            className={`w-6 h-0.5 bg-lime-600 transition-all duration-300 ${
               menuOpen ? 'rotate-45 translate-y-2' : ''
             }`}
           />
           <span
-            className={`w-6 h-0.5 bg-amber-600 transition-all duration-300 ${
+            className={`w-6 h-0.5 bg-lime-600 transition-all duration-300 ${
               menuOpen ? 'opacity-0' : ''
             }`}
           />
           <span
-            className={`w-6 h-0.5 bg-amber-600 transition-all duration-300 ${
+            className={`w-6 h-0.5 bg-lime-600 transition-all duration-300 ${
               menuOpen ? '-rotate-45 -translate-y-2' : ''
             }`}
           />
@@ -123,7 +123,7 @@ const Navbar = ({ onOpenModal }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 onClick={() => setMenuOpen(false)}
-                className="text-xl text-stone-700 hover:text-amber-600 transition-colors"
+                className="text-xl text-stone-700 hover:text-lime-600 transition-colors"
               >
                 {link.label}
               </motion.a>
@@ -136,7 +136,7 @@ const Navbar = ({ onOpenModal }) => {
                 setMenuOpen(false);
                 onOpenModal();
               }}
-              className="bg-gradient-to-r from-amber-500 to-amber-400 text-white px-8 py-3 rounded-full font-medium mt-4"
+              className="bg-gradient-to-r from-lime-500 to-lime-400 text-white px-8 py-3 rounded-full font-medium mt-4"
             >
               Brezplačen pogovor
             </motion.button>
@@ -150,17 +150,17 @@ const Navbar = ({ onOpenModal }) => {
 // Hero Section
 const HeroSection = ({ onOpenModal }) => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-rose-100 via-amber-50/40 to-white">
-      <div className="absolute w-[500px] h-[500px] rounded-full bg-gradient-to-br from-amber-300/15 to-transparent -top-24 -right-24 animate-pulse" />
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-rose-100 via-lime-50/40 to-white">
+      <div className="absolute w-[500px] h-[500px] rounded-full bg-gradient-to-br from-lime-300/15 to-transparent -top-24 -right-24 animate-pulse" />
       <div className="absolute w-[350px] h-[350px] rounded-full bg-gradient-to-br from-rose-300/20 to-transparent -bottom-16 -left-20" />
-      <div className="absolute w-[200px] h-[200px] rounded-full bg-gradient-to-br from-amber-400/10 to-transparent top-[40%] left-[15%]" />
+      <div className="absolute w-[200px] h-[200px] rounded-full bg-gradient-to-br from-lime-400/10 to-transparent top-[40%] left-[15%]" />
 
       <div className="max-w-3xl mx-auto px-6 text-center relative z-10 pt-20">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="inline-block px-5 py-2 bg-amber-500/10 border border-amber-400/30 rounded-full text-xs text-amber-700 tracking-[2px] uppercase mb-8"
+          className="inline-block px-5 py-2 bg-lime-500/10 border border-lime-400/30 rounded-full text-xs text-lime-700 tracking-[2px] uppercase mb-8"
         >
           ✦ Hipno coaching & regresoterapija ✦
         </motion.div>
@@ -196,9 +196,9 @@ const HeroSection = ({ onOpenModal }) => {
         >
           <button
             onClick={onOpenModal}
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-400 text-white rounded-full font-medium shadow-xl shadow-amber-400/30 hover:shadow-2xl hover:shadow-amber-400/50 hover:-translate-y-1 transition-all duration-400 text-lg"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-lime-500 to-lime-400 text-white rounded-full font-medium shadow-xl shadow-lime-400/30 hover:shadow-2xl hover:shadow-lime-400/50 hover:-translate-y-1 transition-all duration-400 text-lg"
           >
-            <i className="fas fa-comments text-sm"></i> Brezplačen uvodni pogovor
+            <i className="fas fa-comments text-sm"></i> Brezplačen pogovor
           </button>
           <a
             href="#about"
@@ -214,7 +214,7 @@ const HeroSection = ({ onOpenModal }) => {
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <i className="fas fa-chevron-down text-amber-400 text-xl opacity-50" />
+        <i className="fas fa-chevron-down text-lime-400 text-xl opacity-50" />
       </motion.div>
     </section>
   );
@@ -266,13 +266,13 @@ const StrugglesSection = ({ onOpenModal }) => {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-20 h-px bg-gradient-to-r from-transparent to-amber-400" />
-            <i className="fas fa-spa text-amber-500" />
-            <div className="w-20 h-px bg-gradient-to-l from-transparent to-amber-400" />
+            <div className="w-20 h-px bg-gradient-to-r from-transparent to-lime-400" />
+            <i className="fas fa-spa text-lime-500" />
+            <div className="w-20 h-px bg-gradient-to-l from-transparent to-lime-400" />
           </div>
           <h2 className="text-3xl md:text-4xl font-serif text-stone-800 mb-4">
             Prepoznavaš se v{' '}
-            <span className="text-amber-600">času, da nekaj spremeniš</span>?
+            <span className="text-lime-600">času, da nekaj spremeniš</span>?
           </h2>
           <p className="text-stone-500 text-lg max-w-2xl mx-auto leading-relaxed">
             Ovire, predsodki in stari vzorci nas pogosto držijo nazaj. Če se prepoznaš v vsaj eni od spodnjih težav, si na pravem mestu.
@@ -290,9 +290,9 @@ const StrugglesSection = ({ onOpenModal }) => {
               whileHover={{ y: -8 }}
               className="bg-gradient-to-br from-rose-100/60 to-white border border-rose-200/50 rounded-2xl p-8 text-center group hover:shadow-xl hover:shadow-rose-200/30 transition-all duration-400 relative overflow-hidden"
             >
-              <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-rose-300 via-amber-400 to-rose-300 opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
+              <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-rose-300 via-lime-400 to-rose-300 opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
               <div className="w-16 h-16 rounded-full bg-gradient-to-br from-rose-200/60 to-white flex items-center justify-center mx-auto mb-5 shadow-md shadow-rose-200/30">
-                <i className={`fas ${item.icon} text-amber-500 text-xl`}></i>
+                <i className={`fas ${item.icon} text-lime-500 text-xl`}></i>
               </div>
               <h3 className="text-lg font-serif text-stone-800 mb-2">{item.title}</h3>
               <p className="text-stone-500 text-sm leading-relaxed">{item.desc}</p>
@@ -307,7 +307,7 @@ const StrugglesSection = ({ onOpenModal }) => {
           transition={{ duration: 0.8 }}
           className="bg-gradient-to-r from-rose-100 to-rose-200/60 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden"
         >
-          <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-amber-300/10" />
+          <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-lime-300/10" />
           <h3 className="text-2xl md:text-3xl font-serif text-stone-800 mb-3 relative z-10">
             Si se prepoznal/a vsaj v eni od teh težav?
           </h3>
@@ -316,7 +316,7 @@ const StrugglesSection = ({ onOpenModal }) => {
           </p>
           <button
             onClick={onOpenModal}
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-400 text-white rounded-full font-medium shadow-xl shadow-amber-400/30 hover:shadow-2xl hover:shadow-amber-400/50 hover:-translate-y-1 transition-all duration-400 relative z-10 text-lg"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-lime-500 to-lime-400 text-white rounded-full font-medium shadow-xl shadow-lime-400/30 hover:shadow-2xl hover:shadow-lime-400/50 hover:-translate-y-1 transition-all duration-400 relative z-10 text-lg"
           >
             <i className="fas fa-paper-plane text-sm"></i> Pošlji povpraševanje
           </button>
@@ -329,7 +329,7 @@ const StrugglesSection = ({ onOpenModal }) => {
 // About Section
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 bg-gradient-to-b from-amber-50/50 to-white">
+    <section id="about" className="py-24 bg-gradient-to-b from-lime-50/50 to-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <motion.div
@@ -347,7 +347,7 @@ const AboutSection = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-rose-900/20 to-transparent" />
             </div>
-            <div className="absolute -bottom-5 -right-5 w-28 h-28 border-2 border-amber-400/40 rounded-2xl -z-10" />
+            <div className="absolute -bottom-5 -right-5 w-28 h-28 border-2 border-lime-400/40 rounded-2xl -z-10" />
           </motion.div>
 
           <motion.div
@@ -357,7 +357,7 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-serif text-stone-800 mb-6 leading-tight">
-              O meni – <span className="text-amber-600">vaša popotnica</span> do spremembe
+              O meni – <span className="text-lime-600">vaša popotnica</span> do spremembe
             </h2>
             <p className="text-stone-600 leading-relaxed mb-4 text-lg">
               Sem hypno coach in regresoterapevtka, predana temu, da se ljudem pomagam znebiti starih omejujočih prepričanj in strahov, ter ponovno najti stik s seboj, s svojim notranjim mirom in lastno močjo.
@@ -366,65 +366,65 @@ const AboutSection = () => {
               Verjamem, da ima vsak človek v sebi vse, kar potrebuje za spremembo – včasih potrebujemo le pravo podporo, da to odkrijemo.
             </p>
 
-            <blockquote className="bg-gradient-to-r from-rose-100/80 to-white border-l-4 border-amber-500 rounded-r-2xl p-6 mb-8 italic text-stone-600 leading-relaxed">
+            <blockquote className="bg-gradient-to-r from-rose-100/80 to-white border-l-4 border-lime-500 rounded-r-2xl p-6 mb-8 italic text-stone-600 leading-relaxed">
               "Tudi sama imam izkušnjo, kako močno lahko hipnoza vpliva na življenje. Prav zato lahko z gotovostjo iz prve roke povem, da je sprememba mogoča tudi zate. Potrebna je le odločitev za ta korak."
             </blockquote>
 
-            <div className="bg-gradient-to-br from-amber-50/80 via-white to-rose-50/50 border border-amber-200/50 rounded-2xl p-6 md:p-8 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-amber-200/30 to-transparent rounded-bl-full" />
+            <div className="bg-gradient-to-br from-lime-50/80 via-white to-rose-50/50 border border-lime-200/50 rounded-2xl p-6 md:p-8 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-lime-200/30 to-transparent rounded-bl-full" />
 
               <div className="text-center mb-6">
-                <span className="inline-block px-4 py-1.5 bg-amber-500 text-white text-xs font-semibold tracking-widest uppercase rounded-full shadow-md shadow-amber-400/30">
+                <span className="inline-block px-4 py-1.5 bg-lime-500 text-white text-xs font-semibold tracking-widest uppercase rounded-full shadow-md shadow-lime-400/30">
                   Vaš potek terapije
                 </span>
               </div>
 
               <div className="flex flex-col items-center gap-0">
-                <div className="w-full max-w-xs bg-white border border-amber-300/60 rounded-xl p-4 shadow-md shadow-amber-100/60 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                <div className="w-full max-w-xs bg-white border border-lime-300/60 rounded-xl p-4 shadow-md shadow-lime-100/60 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
                   <div className="flex items-center gap-3">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-amber-400 to-amber-500 flex items-center justify-center text-white font-serif font-bold text-sm shadow-md shadow-amber-300/40">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-lime-400 to-lime-500 flex items-center justify-center text-white font-serif font-bold text-sm shadow-md shadow-lime-300/40">
                       1
                     </div>
                     <div className="text-left">
                       <div className="text-lg font-serif text-stone-800 font-semibold">15 min</div>
-                      <div className="text-xs text-stone-500">Brezplačen uvodni pogovor</div>
+                      <div className="text-xs text-stone-500">Brezplačen pogovor</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex flex-col items-center py-2">
-                  <div className="w-px h-5 bg-gradient-to-b from-amber-400 to-amber-300" />
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-amber-500 font-semibold bg-amber-50/80 px-3 py-1 rounded-full border border-amber-200/50">
+                  <div className="w-px h-5 bg-gradient-to-b from-lime-400 to-lime-300" />
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-lime-500 font-semibold bg-lime-50/80 px-3 py-1 rounded-full border border-lime-200/50">
                     → potem izberete →
                   </span>
-                  <div className="w-px h-5 bg-gradient-to-b from-amber-300 to-amber-400" />
+                  <div className="w-px h-5 bg-gradient-to-b from-lime-300 to-lime-400" />
                 </div>
 
                 <div className="flex items-center gap-6 w-full justify-center">
                   <div className="flex-1 max-w-[180px] group">
-                    <div className="bg-gradient-to-br from-white to-rose-50/50 border border-rose-200/60 rounded-xl p-4 shadow-md shadow-rose-100/40 hover:shadow-xl hover:shadow-rose-200/40 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
-                      <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-rose-300 via-rose-400 to-rose-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="bg-gradient-to-br from-white to-lime-50/50 border border-lime-200/60 rounded-xl p-4 shadow-md shadow-lime-100/40 hover:shadow-xl hover:shadow-lime-200/40 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                      <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-lime-300 via-lime-400 to-lime-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       <div className="flex items-center gap-3">
-                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-rose-400 to-rose-500 flex items-center justify-center text-white font-serif font-bold text-sm shadow-md shadow-rose-300/40">
+                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-lime-400 to-lime-500 flex items-center justify-center text-white font-serif font-bold text-sm shadow-md shadow-rose-300/40">
                           2A
                         </div>
                         <div className="text-left">
                           <div className="text-lg font-serif text-stone-800 font-semibold">45 min</div>
-                          <div className="text-xs text-stone-500">Enkratno srečanje</div>
+                          <div className="text-xs text-stone-500">Uvodni pogovor</div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-amber-100 border-2 border-amber-300/50 flex items-center justify-center">
-                    <span className="text-xs font-serif font-bold text-amber-600">ali</span>
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-lime-100 border-2 border-lime-300/50 flex items-center justify-center">
+                    <span className="text-xs font-serif font-bold text-lime-600">ali</span>
                   </div>
 
                   <div className="flex-1 max-w-[180px] group">
-                    <div className="bg-gradient-to-br from-white to-amber-50/50 border border-amber-200/60 rounded-xl p-4 shadow-md shadow-amber-100/40 hover:shadow-xl hover:shadow-amber-200/40 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
-                      <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="bg-gradient-to-br from-white to-lime-50/50 border border-lime-200/60 rounded-xl p-4 shadow-md shadow-lime-100/40 hover:shadow-xl hover:shadow-lime-200/40 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                      <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-lime-300 via-lime-400 to-lime-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       <div className="flex items-center gap-3">
-                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-amber-400 to-amber-500 flex items-center justify-center text-white font-serif font-bold text-sm shadow-md shadow-amber-300/40">
+                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-lime-400 to-lime-500 flex items-center justify-center text-white font-serif font-bold text-sm shadow-md shadow-lime-300/40">
                           2B
                         </div>
                         <div className="text-left">
@@ -457,12 +457,12 @@ const ProcessSection = () => {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-20 h-px bg-gradient-to-r from-transparent to-amber-400" />
-            <i className="fas fa-feather-pointed text-amber-500" />
-            <div className="w-20 h-px bg-gradient-to-l from-transparent to-amber-400" />
+            <div className="w-20 h-px bg-gradient-to-r from-transparent to-lime-400" />
+            <i className="fas fa-feather-pointed text-lime-500" />
+            <div className="w-20 h-px bg-gradient-to-l from-transparent to-lime-400" />
           </div>
           <h2 className="text-3xl md:text-4xl font-serif text-stone-800 mb-4">
-            Kako poteka <span className="text-amber-600">srečanje z menoj</span>
+            Kako poteka <span className="text-lime-600">srečanje z menoj</span>
           </h2>
           <p className="text-stone-500 text-lg max-w-2xl mx-auto">
             Vsak korak je skrbno zasnovan, da vam zagotovi varen, podprt in učinkovit proces spremembe.
@@ -477,10 +477,10 @@ const ProcessSection = () => {
           className="flex justify-center mb-8"
         >
           <div className="relative">
-            <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-amber-400 rounded-full flex items-center justify-center text-white font-serif font-bold text-2xl shadow-lg shadow-amber-400/40 z-10 relative">
+            <div className="w-16 h-16 bg-gradient-to-r from-lime-500 to-lime-400 rounded-full flex items-center justify-center text-white font-serif font-bold text-2xl shadow-lg shadow-lime-400/40 z-10 relative">
               1
             </div>
-            <div className="absolute top-14 left-1/2 -translate-x-1/2 w-0.5 h-12 bg-gradient-to-b from-amber-400 to-amber-300" />
+            <div className="absolute top-14 left-1/2 -translate-x-1/2 w-0.5 h-12 bg-gradient-to-b from-lime-400 to-lime-300" />
           </div>
         </motion.div>
 
@@ -492,7 +492,7 @@ const ProcessSection = () => {
           className="flex justify-center mb-12"
         >
           <div className="bg-gradient-to-br from-rose-100/60 to-white border border-rose-200/40 rounded-2xl p-6 md:p-8 max-w-lg hover:shadow-xl hover:shadow-rose-200/20 hover:-translate-y-1 transition-all duration-400 text-center">
-            <span className="inline-block px-3 py-1 bg-amber-500/10 rounded-full text-xs text-amber-700 font-medium tracking-wide mb-3">
+            <span className="inline-block px-3 py-1 bg-lime-500/10 rounded-full text-xs text-lime-700 font-medium tracking-wide mb-3">
               KORAK 1
             </span>
             <h3 className="text-xl font-serif text-stone-800 mb-2">
@@ -511,9 +511,9 @@ const ProcessSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex justify-center items-center gap-4 mb-4"
         >
-          <div className="w-20 h-px bg-gradient-to-r from-transparent to-amber-300" />
-          <span className="text-xs text-amber-500 font-medium tracking-widest uppercase">Izberite svojo pot</span>
-          <div className="w-20 h-px bg-gradient-to-l from-transparent to-amber-300" />
+          <div className="w-20 h-px bg-gradient-to-r from-transparent to-lime-300" />
+          <span className="text-xs text-lime-500 font-medium tracking-widest uppercase">Izberite svojo pot</span>
+          <div className="w-20 h-px bg-gradient-to-l from-transparent to-lime-300" />
         </motion.div>
 
         <div className="hidden md:block relative h-16 mb-8">
@@ -525,8 +525,8 @@ const ProcessSection = () => {
             <line x1="600" y1="30" x2="600" y2="64" stroke="url(#forkGrad)" strokeWidth="2" />
             <defs>
               <linearGradient id="forkGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#f59e0b" />
-                <stop offset="100%" stopColor="#fbbf24" />
+                <stop offset="0%" stopColor="#bef264" />
+                <stop offset="100%" stopColor="#65a30d" />
               </linearGradient>
             </defs>
           </svg>
@@ -542,16 +542,16 @@ const ProcessSection = () => {
           >
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 mt-1">
-                <div className="w-14 h-14 bg-gradient-to-r from-amber-500 to-amber-400 rounded-full flex items-center justify-center text-white font-serif font-bold text-xl shadow-lg shadow-amber-400/40">
+                <div className="w-14 h-14 bg-gradient-to-r from-lime-500 to-lime-400 rounded-full flex items-center justify-center text-white font-serif font-bold text-xl shadow-lg shadow-lime-400/40">
                   2A
                 </div>
               </div>
               <div className="flex-1 bg-gradient-to-br from-rose-100/60 to-white border border-rose-200/40 rounded-2xl p-6 hover:shadow-xl hover:shadow-rose-200/20 hover:-translate-y-1 transition-all duration-400">
-                <span className="inline-block px-3 py-1 bg-amber-500/10 rounded-full text-xs text-amber-700 font-medium tracking-wide mb-3">
+                <span className="inline-block px-3 py-1 bg-lime-500/10 rounded-full text-xs text-lime-700 font-medium tracking-wide mb-3">
                   POT A
                 </span>
                 <h3 className="text-xl font-serif text-stone-800 mb-2">
-                  Enkratno srečanje (45 min)
+                  Uvodni pogovor (45 min)
                 </h3>
                 <p className="text-stone-500 leading-relaxed text-sm">
                   Individualno enkratno srečanje, ki vključuje regresijski proces in osebno pripravljen hipnotični posnetek za domov. Primerno za specifično težavo, ki jo želite hitro in učinkovito obravnavati.
@@ -569,13 +569,13 @@ const ProcessSection = () => {
           >
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 mt-1">
-                <div className="w-14 h-14 bg-gradient-to-r from-amber-500 to-amber-400 rounded-full flex items-center justify-center text-white font-serif font-bold text-xl shadow-lg shadow-amber-400/40">
+                <div className="w-14 h-14 bg-gradient-to-r from-lime-500 to-lime-400 rounded-full flex items-center justify-center text-white font-serif font-bold text-xl shadow-lg shadow-lime-400/40">
                   2B
                 </div>
               </div>
               <div className="flex-1 bg-gradient-to-br from-rose-100/60 to-white border border-rose-200/40 rounded-2xl p-6 hover:shadow-xl hover:shadow-rose-200/20 hover:-translate-y-1 transition-all duration-400 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-amber-500" />
-                <span className="inline-block px-3 py-1 bg-amber-500/10 rounded-full text-xs text-amber-700 font-medium tracking-wide mb-3">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-lime-400 to-lime-500" />
+                <span className="inline-block px-3 py-1 bg-lime-500/10 rounded-full text-xs text-lime-700 font-medium tracking-wide mb-3">
                   POT B
                 </span>
                 <h3 className="text-xl font-serif text-stone-800 mb-2">
@@ -598,7 +598,7 @@ const ProcessSection = () => {
         >
           <div className="relative z-10">
             <h3 className="text-xl font-serif text-stone-800 mb-4">
-              <i className="fas fa-shield-heart text-amber-500 mr-2"></i>
+              <i className="fas fa-shield-heart text-lime-500 mr-2"></i>
               Varen prostor za vašo preobrazbo
             </h3>
             <p className="text-stone-600 leading-relaxed mb-3">
@@ -606,7 +606,7 @@ const ProcessSection = () => {
             </p>
             <p className="text-stone-600 leading-relaxed mb-3">
               Če se morda bojite, da boste med hipnoterapijo izgubili nadzor, bodite brez skrbi –{' '}
-              <span className="text-amber-700 font-medium">imate nadzor nad celotnim dogajanjem ves čas prav vi.</span>
+              <span className="text-lime-700 font-medium">imate nadzor nad celotnim dogajanjem ves čas prav vi.</span>
             </p>
             <p className="text-stone-600 leading-relaxed">
               Nenazadnje je hipnoza značilna za vsakdanje življenje – samo pomislite na trenutke, ko sanjate z odprtimi očmi ali se tako zelo zatopite v knjigo ali film, da niste več pozorni na svojo okolico.
@@ -706,20 +706,20 @@ const ContactModal = ({ isOpen, onClose }) => {
                 className="text-center py-8"
               >
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-rose-100 to-rose-200 flex items-center justify-center mx-auto mb-6">
-                  <i className="fas fa-check text-amber-500 text-3xl"></i>
+                  <i className="fas fa-check text-lime-500 text-3xl"></i>
                 </div>
                 <h3 className="text-2xl font-serif text-stone-800 mb-3">Hvala za vaše sporočilo!</h3>
                 <p className="text-stone-500 leading-relaxed mb-4">
                   Vaše povpraševanje je bilo uspešno poslano. Kontaktirala vas bom v najkrajšem možnem času, da se dogovoriva za vaš brezplačen 15-minutni telefonski pogovor.
                 </p>
-                <p className="text-amber-600 text-sm">
+                <p className="text-lime-600 text-sm">
                   <i className="fas fa-heart mr-1"></i> Veselim se najinega pogovora!
                 </p>
               </motion.div>
             ) : (
               <>
                 <h2 className="text-2xl font-serif text-stone-800 mb-2">
-                  Rezervirajte <span className="text-amber-600">brezplačen pogovor</span>
+                  Rezervirajte <span className="text-lime-600">brezplačen pogovor</span>
                 </h2>
                 <p className="text-stone-500 mb-8 text-sm leading-relaxed">
                   Pustite svoje kontaktne podatke in na kratko opišite težavo. Kontaktirala vas bom v najkrajšem možnem času.
@@ -743,7 +743,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                       onChange={handleChange}
                       placeholder="Vaše ime in priimek"
                       required
-                      className="w-full px-4 py-3 border border-rose-200 rounded-xl bg-amber-50/50 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-stone-700 placeholder:text-stone-400"
+                      className="w-full px-4 py-3 border border-rose-200 rounded-xl bg-lime-50/50 focus:border-lime-500 focus:ring-2 focus:ring-lime-500/20 outline-none transition-all text-stone-700 placeholder:text-stone-400"
                     />
                   </div>
 
@@ -758,7 +758,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                       onChange={handleChange}
                       placeholder="vas@email.si"
                       required
-                      className="w-full px-4 py-3 border border-rose-200 rounded-xl bg-amber-50/50 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-stone-700 placeholder:text-stone-400"
+                      className="w-full px-4 py-3 border border-rose-200 rounded-xl bg-lime-50/50 focus:border-lime-500 focus:ring-2 focus:ring-lime-500/20 outline-none transition-all text-stone-700 placeholder:text-stone-400"
                     />
                   </div>
 
@@ -773,7 +773,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                       onChange={handleChange}
                       placeholder="+386 ..."
                       required
-                      className="w-full px-4 py-3 border border-rose-200 rounded-xl bg-amber-50/50 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-stone-700 placeholder:text-stone-400"
+                      className="w-full px-4 py-3 border border-rose-200 rounded-xl bg-lime-50/50 focus:border-lime-500 focus:ring-2 focus:ring-lime-500/20 outline-none transition-all text-stone-700 placeholder:text-stone-400"
                     />
                   </div>
 
@@ -783,7 +783,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                       name="issue"
                       value={formData.issue}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-rose-200 rounded-xl bg-amber-50/50 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-stone-700 appearance-none cursor-pointer"
+                      className="w-full px-4 py-3 border border-rose-200 rounded-xl bg-lime-50/50 focus:border-lime-500 focus:ring-2 focus:ring-lime-500/20 outline-none transition-all text-stone-700 appearance-none cursor-pointer"
                     >
                       <option value="">Izberite težavo...</option>
                       <option value="omejujoča-prepričanja">Omejujoča prepričanja</option>
@@ -807,14 +807,14 @@ const ContactModal = ({ isOpen, onClose }) => {
                       onChange={handleChange}
                       placeholder="V nekaj besedah opišite, kaj vas pesti in kaj si želite spremeniti..."
                       rows={4}
-                      className="w-full px-4 py-3 border border-rose-200 rounded-xl bg-amber-50/50 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-stone-700 placeholder:text-stone-400 resize-y"
+                      className="w-full px-4 py-3 border border-rose-200 rounded-xl bg-lime-50/50 focus:border-lime-500 focus:ring-2 focus:ring-lime-500/20 outline-none transition-all text-stone-700 placeholder:text-stone-400 resize-y"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 bg-gradient-to-r from-amber-500 to-amber-400 text-white rounded-xl font-semibold text-lg hover:shadow-xl hover:shadow-amber-400/30 hover:-translate-y-0.5 transition-all duration-400 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none"
+                    className="w-full py-4 bg-gradient-to-r from-lime-500 to-lime-400 text-white rounded-xl font-semibold text-lg hover:shadow-xl hover:shadow-lime-400/30 hover:-translate-y-0.5 transition-all duration-400 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none"
                   >
                     {isSubmitting ? (
                       <span className="inline-flex items-center gap-2">
@@ -839,8 +839,8 @@ const ContactModal = ({ isOpen, onClose }) => {
 // Final CTA Section
 const FinalCTASection = ({ onOpenModal }) => {
   return (
-    <section id="contact" className="py-24 bg-gradient-to-br from-rose-100 via-amber-50/40 to-white relative overflow-hidden">
-      <div className="absolute w-[600px] h-[600px] rounded-full bg-amber-300/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+    <section id="contact" className="py-24 bg-gradient-to-br from-rose-100 via-lime-50/40 to-white relative overflow-hidden">
+      <div className="absolute w-[600px] h-[600px] rounded-full bg-lime-300/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -850,16 +850,16 @@ const FinalCTASection = ({ onOpenModal }) => {
         className="max-w-2xl mx-auto px-6 text-center relative z-10"
       >
         <div className="flex items-center justify-center gap-3 mb-8">
-          <div className="w-20 h-px bg-gradient-to-r from-transparent to-amber-400" />
-          <i className="fas fa-star text-amber-500" />
-          <div className="w-20 h-px bg-gradient-to-l from-transparent to-amber-400" />
+          <div className="w-20 h-px bg-gradient-to-r from-transparent to-lime-400" />
+          <i className="fas fa-star text-lime-500" />
+          <div className="w-20 h-px bg-gradient-to-l from-transparent to-lime-400" />
         </div>
 
         <h2 className="text-3xl md:text-5xl font-serif text-stone-800 mb-6 leading-tight">
-          Ste pripravljeni na <span className="text-amber-600">spremembo</span>?
+          Ste pripravljeni na <span className="text-lime-600">spremembo</span>?
         </h2>
 
-        <div className="inline-flex items-center gap-2 px-5 py-2 bg-amber-500/10 border border-amber-400/30 rounded-full text-sm text-amber-700 font-medium mb-6">
+        <div className="inline-flex items-center gap-2 px-5 py-2 bg-lime-500/10 border border-lime-400/30 rounded-full text-sm text-lime-700 font-medium mb-6">
           <i className="fas fa-phone"></i> 15-minutni brezplačen telefonski pogovor
         </div>
 
@@ -869,7 +869,7 @@ const FinalCTASection = ({ onOpenModal }) => {
 
         <button
           onClick={onOpenModal}
-          className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-gradient-to-r from-amber-500 to-amber-400 text-white rounded-full font-semibold shadow-xl shadow-amber-400/30 hover:shadow-2xl hover:shadow-amber-400/50 hover:-translate-y-1 transition-all duration-400 text-lg"
+          className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-gradient-to-r from-lime-500 to-lime-400 text-white rounded-full font-semibold shadow-xl shadow-lime-400/30 hover:shadow-2xl hover:shadow-lime-400/50 hover:-translate-y-1 transition-all duration-400 text-lg"
         >
           <i className="fas fa-calendar-check"></i> Rezervirajte svoj brezplačen pogovor
         </button>
@@ -883,25 +883,25 @@ const Footer = () => {
   return (
     <footer className="bg-stone-800 text-stone-400 py-12">
       <div className="max-w-4xl mx-auto px-6 text-center">
-        <div className="text-2xl font-serif text-amber-400 mb-2">Notranja Preobrazba</div>
+        <div className="text-2xl font-serif text-lime-400 mb-2">Notranja Preobrazba</div>
         <p className="text-sm text-stone-500 mb-4">Hipno coaching & regresoterapija</p>
-        <div className="w-16 h-px bg-amber-500/30 mx-auto mb-6" />
+        <div className="w-16 h-px bg-lime-500/30 mx-auto mb-6" />
         <div className="flex justify-center gap-4 mb-6">
           <a
             href="#"
-            className="w-11 h-11 rounded-full border border-stone-600/30 flex items-center justify-center text-stone-500 hover:border-amber-500 hover:text-amber-500 hover:-translate-y-1 transition-all duration-300"
+            className="w-11 h-11 rounded-full border border-stone-600/30 flex items-center justify-center text-stone-500 hover:border-lime-500 hover:text-lime-500 hover:-translate-y-1 transition-all duration-300"
           >
             <i className="fab fa-facebook-f"></i>
           </a>
           <a
             href="https://www.instagram.com/tanjanapotnik?igsh=MXN4d3VmbmgxODR5NA=="
-            className="w-11 h-11 rounded-full border border-stone-600/30 flex items-center justify-center text-stone-500 hover:border-amber-500 hover:text-amber-500 hover:-translate-y-1 transition-all duration-300"
+            className="w-11 h-11 rounded-full border border-stone-600/30 flex items-center justify-center text-stone-500 hover:border-lime-500 hover:text-lime-500 hover:-translate-y-1 transition-all duration-300"
           >
             <i className="fab fa-instagram"></i>
           </a>
           <a
             href="#"
-            className="w-11 h-11 rounded-full border border-stone-600/30 flex items-center justify-center text-stone-500 hover:border-amber-500 hover:text-amber-500 hover:-translate-y-1 transition-all duration-300"
+            className="w-11 h-11 rounded-full border border-stone-600/30 flex items-center justify-center text-stone-500 hover:border-lime-500 hover:text-lime-500 hover:-translate-y-1 transition-all duration-300"
           >
             <i className="fas fa-envelope"></i>
           </a>
@@ -935,7 +935,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="font-sans text-stone-800 bg-amber-50/30 min-h-screen">
+    <div className="font-sans text-stone-800 bg-lime-50/30 min-h-screen">
       <style>{`
         @import url('https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@4.5.0/index.min.css');
         @import url('https://cdn.jsdelivr.net/npm/@fontsource/lato@4.5.0/index.min.css');
