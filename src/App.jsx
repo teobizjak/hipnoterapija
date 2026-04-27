@@ -583,7 +583,8 @@ const ProcessSection = () => {
                   A
                 </div>
               </div>
-              <div className="flex-1 bg-gradient-to-br from-rose-100/60 to-white border border-rose-200/40 rounded-2xl p-6 hover:shadow-xl hover:shadow-rose-200/20 hover:-translate-y-1 transition-all duration-400">
+              <div className="flex-1 bg-gradient-to-br from-rose-100/60 to-white border border-rose-200/40 rounded-2xl p-6 hover:shadow-xl hover:shadow-rose-200/20 hover:-translate-y-1 transition-all duration-400 relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-lime-400 to-lime-500" />
                 <span className="inline-block px-3 py-1 bg-lime-500/10 rounded-full text-xs text-lime-700 font-medium tracking-wide mb-3">
                   POT A
                 </span>
