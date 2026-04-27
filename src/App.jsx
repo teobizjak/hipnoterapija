@@ -499,9 +499,46 @@ const ProcessSection = () => {
               15-minutni brezplačen pogovor
             </h3>
             <p className="text-stone-500 leading-relaxed">
-              Najprej se dogovorimo za uvodni pogovor, kjer se spoznavamo. Pogovorimo se o vaši težavi, željah in ciljih. Spoznavam vašo zgodbo in skupaj oceniva, katera pot je prava zate.
+            Pogovorimo se o vaši težavi, željah in ciljih. Spoznavam vašo zgodbo in skupaj oceniva, katera pot je prava zate. Dogovorimo se za uvodni pogovor, kjer se v živo spoznamo.
             </p>
           </div>
+           
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0 }}
+          className="flex justify-center mb-8"
+        >
+          <div className="relative">
+            <div className="w-16 h-16 bg-gradient-to-r from-lime-500 to-lime-400 rounded-full flex items-center justify-center text-white font-serif font-bold text-2xl shadow-lg shadow-lime-400/40 z-10 relative">
+              2
+            </div>
+            <div className="absolute top-14 left-1/2 -translate-x-1/2 w-0.5 h-12 bg-gradient-to-b from-lime-400 to-lime-300" />
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="flex justify-center mb-12"
+        >
+          <div className="bg-gradient-to-br from-rose-100/60 to-white border border-rose-200/40 rounded-2xl p-6 md:p-8 max-w-lg hover:shadow-xl hover:shadow-rose-200/20 hover:-translate-y-1 transition-all duration-400 text-center">
+            <span className="inline-block px-3 py-1 bg-lime-500/10 rounded-full text-xs text-lime-700 font-medium tracking-wide mb-3">
+              KORAK 2
+            </span>
+            <h3 className="text-xl font-serif text-stone-800 mb-2">
+              Uvodni pogovor (45 min)
+            </h3>
+            <p className="text-stone-500 leading-relaxed">
+            Poglobjeno se pogovorimo o vaši težavi in skupaj izbereva najprimernejšo pot zate, ki vodi v rešitev.
+            </p>
+          </div>
+           
         </motion.div>
 
         <motion.div
@@ -543,7 +580,7 @@ const ProcessSection = () => {
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 mt-1">
                 <div className="w-14 h-14 bg-gradient-to-r from-lime-500 to-lime-400 rounded-full flex items-center justify-center text-white font-serif font-bold text-xl shadow-lg shadow-lime-400/40">
-                  2A
+                  A
                 </div>
               </div>
               <div className="flex-1 bg-gradient-to-br from-rose-100/60 to-white border border-rose-200/40 rounded-2xl p-6 hover:shadow-xl hover:shadow-rose-200/20 hover:-translate-y-1 transition-all duration-400">
@@ -551,11 +588,12 @@ const ProcessSection = () => {
                   POT A
                 </span>
                 <h3 className="text-xl font-serif text-stone-800 mb-2">
-                  Uvodni pogovor (45 min)
+                  Regresija
                 </h3>
                 <p className="text-stone-500 leading-relaxed text-sm">
                   Individualno enkratno srečanje, ki vključuje regresijski proces in osebno pripravljen hipnotični posnetek za domov. Primerno za specifično težavo, ki jo želite hitro in učinkovito obravnavati.
                 </p>
+                {/** regresija - Individualno enkratno srečanje, ki vključuje regresijski proces in osebno pripravljen hipnotični posnetek za domov. Primerno za specifično težavo, ki jo želite hitro in učinkovito obravnavati. */}
               </div>
             </div>
           </motion.div>
@@ -570,7 +608,7 @@ const ProcessSection = () => {
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 mt-1">
                 <div className="w-14 h-14 bg-gradient-to-r from-lime-500 to-lime-400 rounded-full flex items-center justify-center text-white font-serif font-bold text-xl shadow-lg shadow-lime-400/40">
-                  2B
+                  B
                 </div>
               </div>
               <div className="flex-1 bg-gradient-to-br from-rose-100/60 to-white border border-rose-200/40 rounded-2xl p-6 hover:shadow-xl hover:shadow-rose-200/20 hover:-translate-y-1 transition-all duration-400 relative overflow-hidden">
