@@ -894,7 +894,7 @@ const Footer = () => {
             <i className="fab fa-facebook-f"></i>
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/tanjanapotnik?igsh=MXN4d3VmbmgxODR5NA=="
             className="w-11 h-11 rounded-full border border-stone-600/30 flex items-center justify-center text-stone-500 hover:border-amber-500 hover:text-amber-500 hover:-translate-y-1 transition-all duration-300"
           >
             <i className="fab fa-instagram"></i>
