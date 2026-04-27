@@ -631,7 +631,7 @@ const ContactModal = ({ isOpen, onClose }) => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState('');
 
-  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mvzdnnpk';
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mkokadzb';
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
