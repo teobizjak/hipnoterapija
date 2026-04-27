@@ -172,7 +172,7 @@ const HeroSection = ({ onOpenModal }) => {
           className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight text-stone-800 mb-6"
         >
           Predstavljaj si življenje{' '}
-          <span className="bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-lime-300 to-lime-600 bg-clip-text text-transparent">
             brez omejujočih prepričanj
           </span>{' '}
           – brez omejitev.
