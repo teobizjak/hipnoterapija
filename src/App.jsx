@@ -903,7 +903,8 @@ const Footer = () => {
         <div className="w-16 h-px bg-lime-500/30 mx-auto mb-6" />
         <div className="flex justify-center gap-4 mb-6">
           <a
-            href="#"
+            href="https://www.facebook.com/tanja.napotnik"
+            
             className="w-11 h-11 rounded-full border border-stone-600/30 flex items-center justify-center text-stone-500 hover:border-lime-500 hover:text-lime-500 hover:-translate-y-1 transition-all duration-300"
           >
             <i className="fab fa-facebook-f"></i>
@@ -915,7 +916,7 @@ const Footer = () => {
             <i className="fab fa-instagram"></i>
           </a>
           <a
-            href="#"
+            href="mailto:tanja.napotnik@gmail.com"
             className="w-11 h-11 rounded-full border border-stone-600/30 flex items-center justify-center text-stone-500 hover:border-lime-500 hover:text-lime-500 hover:-translate-y-1 transition-all duration-300"
           >
             <i className="fas fa-envelope"></i>
